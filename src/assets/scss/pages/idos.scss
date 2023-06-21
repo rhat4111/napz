@@ -1,0 +1,391 @@
+.idos {
+  display: flex;
+  position: relative;
+
+  .bg-image {
+    position: fixed;
+    bottom: 0;
+
+    img {
+      opacity: 0.6;
+      width: 100%;
+      filter: blur(30px); 
+    }
+
+    div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #00000000;
+      backdrop-filter: blur(50px) brightness(100%);
+    }
+  }
+
+  .sidebar {
+    padding-bottom: 113px;
+    box-sizing: border-box;
+    z-index: 1000;
+    height: 100vh;
+    overflow-y: hidden;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    width: 269px;
+    min-height: 100vh;
+    background: linear-gradient(75deg, #160624, #351850);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      overflow-y: overlay;
+    }
+
+    .header {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 36px 36px 90px;
+      display: flex;
+      align-items: center;
+
+      .logo {
+        width: 130px;
+        height: 44px;
+        margin-left: 21px;
+      }
+
+      .back {
+        width: 30px;
+        height: 24px;
+      }
+    }
+
+    .menus {
+      width: 100%;
+      ul {
+        padding-left: 0;
+        margin: 0;
+
+        li {
+          width: 100%;
+          height: 44px;
+          box-sizing: border-box;
+          cursor: pointer;
+          list-style-type: none;
+          color: #FFF;
+          display: flex;
+          align-items: center;
+          padding: 0 36px;
+
+          font: {
+            size: 21px;
+            weight: 700;
+          }
+
+          &.active {
+            background: #AE00BB;
+          }
+        }
+      }
+    }
+
+    .search-form {
+      padding: 57px 36px 0;
+      .title {
+        font: {
+          size: 21px;
+          weight: 500;
+        }
+        line-height: 25px;
+        margin-bottom: 26px;
+        color: #A60BBE;
+      }
+
+      .filter {
+        margin-bottom: 30px;
+
+        select {
+          width: 100%;
+          border: none;
+          height: 43px;
+          margin-bottom: 21px;
+          padding: 0 22px;
+          appearance: none;
+          cursor: pointer;
+          outline: none;
+          border-radius: 10px;
+          background: url('../../images/idos/select-box-icon.svg') no-repeat #180727;
+          background-position-y: 50%;
+          background-position-x: calc(100% - 22px);
+
+          font: {
+            size: 13px;
+            weight: 500;
+          }
+          color: #FFFFFF20;
+        }
+      }
+
+      .range {
+        margin-bottom: 16px;
+
+        input {
+          width: 100%;
+          padding: 0 10px;
+          box-sizing: border-box;
+          margin-bottom: 14px;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #CF00E0;
+          background: none;
+          height: 42px;
+          color: #FFF;
+
+          font: {
+            size: 18px;
+            weight: 500;
+          }
+        }
+
+        .to {
+          font: {
+            size: 13px;
+            weight: 500;
+          }
+          line-height: 16px;
+          color: #FFFFFF20;
+        }
+      }
+    }
+
+    .search-btn {
+      display: flex;
+      padding: 0 36px;
+      box-sizing: border-box;
+      justify-content: flex-end;
+      width: 100%;
+
+      button {
+        font: {
+          size: 12px;
+          weight: 500;
+        }
+        color: #FFF;
+        width: 73px;
+        height: 30px;
+        border-radius: 50px;
+        background: linear-gradient(75deg, #2500E0, #B305B9);
+        border: none;
+      }
+    }
+  }
+
+  & > .content {
+    width: 100%;
+    padding: 0 40px;
+
+    .header {
+      background: #000;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      .navbar {
+        padding: 44px 0 52px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .search-field {
+          width: 50%;
+          position: relative;
+
+          input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 36px;
+            border: 3px solid #FFFFFF40;
+            border-radius: 50px;
+            outline: none;
+            padding: 0 25px;
+            background: none;
+            font: {
+              size: 12px;
+              weight: 500;
+            }
+            outline: none;
+            color: #FFF;
+          }
+
+          img {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        .btn-group {
+          button {
+            width: 168px;
+            height: 34px;
+            border-radius: 50px;
+            background: none;
+
+            font: {
+              size: 14px;
+              weight: 700;
+            }
+
+            &:first-child {
+              color: #FFF;
+              border: 3px solid #FFF;
+              margin-right: 28px;
+            }
+  
+            &:last-child {
+              color: #CF00E0;
+              border: 3px solid #CF00E0;
+            }
+          }
+        }
+      }
+
+      .table-bar {
+        .title {
+          font: {
+            size: 35px;
+            weight: 900;
+          }
+          color: #FFF;
+        }
+
+        & > div {
+          color: #FFFFFF85;
+          display: flex;
+          justify-content: space-between;
+          padding: 28px 50px 28px 28px;
+          font: {
+            size: 16px;
+            weight: 500;
+          }
+
+          & > div:last-child {
+            font-weight: 700;
+
+            select {
+              width: 80px;
+              margin-left: 17px;
+              appearance: none;
+              background: url('../../images/idos/select-box-icon.svg') no-repeat;
+              background-position-x: 100%;
+              background-position-y: 50%;
+              outline: none;
+              cursor: pointer;
+            }
+          }
+
+          select {
+            background: none;
+            color: #FFFFFF85;
+            background: none;
+            border: none;
+            font: {
+              size: 16px;
+              weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    .body {
+      .item {
+        padding: 21px 36px;
+        min-height: 100px;
+        box-sizing: border-box;
+        background: #1E122980;
+        align-items: center;
+        backdrop-filter: blur(50px) brightness(110%);
+        border-radius: 20px;
+        margin-bottom: 15px;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        color: #FFF;
+
+        .col-1 {
+          img {
+            width: 59px;
+            height: 59px;
+          }
+        }
+
+        .col-2 {
+          display: flex;
+          align-items: center;
+          font: {
+            size: 28px;
+            weight: 700;
+          }
+
+          img {
+            margin-right: 57px;
+            width: 58px;
+            height: 59px;
+          }
+        }
+
+        .col-3 {
+          display: flex;
+
+          font: {
+            size: 12px;
+            weight: 500;
+          }
+          line-height: 22px;
+
+          & > div:first-child {
+            margin-right: 10px;
+          }
+
+          b {
+            font-weight: 900;
+          }
+        }
+
+        .col-4 {
+          font: {
+            size: 13px;
+            weight: 500;
+          }
+
+          b {
+            font: {
+              size: 20px;
+              weight: 700;
+            }
+          }
+        }
+
+        .col-5 {
+          button {
+            width: 164px;
+            border: none;
+            border-radius: 50px;
+            height: 47px;
+            background: linear-gradient(75deg, #2500E0, #B305B9);
+            color: #FFF;
+            font: {
+              size: 13px;
+              weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

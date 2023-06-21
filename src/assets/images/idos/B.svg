@@ -1,0 +1,10 @@
+<svg id="B" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.9" y1="0.82" x2="0.09" y2="0.233" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00fc61"/>
+      <stop offset="1" stop-color="#003bff"/>
+    </linearGradient>
+  </defs>
+  <circle id="Ellipse_3" data-name="Ellipse 3" cx="40" cy="40" r="40" fill="url(#linear-gradient)"/>
+  <text id="B-2" data-name="B" transform="translate(25 55)" fill="#fff" font-size="40" font-family="Montserrat-Black, Montserrat" font-weight="800"><tspan x="0" y="0">B</tspan></text>
+</svg>
